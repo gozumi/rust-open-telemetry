@@ -1,10 +1,16 @@
 FROM ubuntu:latest
 
-# RUN groupadd -r developer \
-#     && useradd --no-log-init -r -g developer developer
+RUN apt update 
 
-# RUN mkdir /workspace
-#     && chown developer:developer /workspace
+RUN apt upgrade -y
+
+RUN apt install git -y
+
+# COPY ./ /workspace
+
+# RUN adduser developer
+
+# RUN chown -R developer:developer /workspace
 
 # USER developer
 
