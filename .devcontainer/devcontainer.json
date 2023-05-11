@@ -2,11 +2,20 @@
 	"name": "Rust Open Telemetry Demo",
 	"build": {
 		"dockerfile": "Dockerfile",
-		"context": ".."
+		"args": { "VARIANT": "focal" }
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
 	"customizations": {
 		"vscode": {
-			"extensions": ["rust-lang.rust-analyzer", "mhutchie.git-graph", "eamodio.gitlens"]
+			"extensions": [
+				"rust-lang.rust-analyzer", 
+				"mhutchie.git-graph", 
+				"eamodio.gitlens",
+				"ms-azuretools.vscode-docker"
+			]
 		} 
-	}
+	},
+	"remoteUser": "vscode"
 }
