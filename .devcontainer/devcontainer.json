@@ -1,0 +1,12 @@
+{
+	"name": "Rust Open Telemetry Demo",
+	"dockerComposeFile": ["./docker-compose.yml", "../docker-compose.yml"],
+	"service": "development",
+	"workspaceFolder": "/",
+	"customizations": {
+		"vscode": {
+			"extensions": ["rust-lang.rust-analyzer", "mhutchie.git-graph", "eamodio.gitlens"]
+		} 
+	},
+	"overrideCommand": true
+}
