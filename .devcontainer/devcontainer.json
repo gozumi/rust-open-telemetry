@@ -2,7 +2,10 @@
 	"name": "Rust Open Telemetry Demo",
 	"build": {
 		"dockerfile": "Dockerfile",
-		"args": { "VARIANT": "focal" }
+		"args": { 
+			"VARIANT": "jammy",
+			"DOTFILES": "git@github.com:gozumi/dotfiles.git"
+		}
 	},
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
