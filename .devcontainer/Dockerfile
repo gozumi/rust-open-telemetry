@@ -13,3 +13,9 @@ RUN git clone https://github.com/gozumi/dotfiles.git /home/vscode/git-downloads/
 COPY library-scripts/git-prompt.sh /home/vscode/git-downloads/git-prompt.sh
 
 RUN rm /home/vscode/.zshrc && ln -s /home/vscode/git-downloads/dotfiles/.zshrc /home/vscode/.zshrc
+
+USER vscode
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+RUN mkdir /home/vscode/.zfunc
+RUN rustup completions zsh > /home/vscode/.zfunc/_rustup 
+RUN rustup completions zsh cargo > /home/vscode/.zfunc/_cargo
