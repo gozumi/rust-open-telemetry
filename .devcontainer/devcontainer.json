@@ -4,13 +4,9 @@
 		"dockerfile": "Dockerfile",
 		"context": ".."
 	},
-	// "dockerComposeFile": ["./docker-compose.yml", "../docker-compose.yml"],
-	// "service": "development",
-	// "workspaceFolder": "/workspace",
 	"customizations": {
 		"vscode": {
 			"extensions": ["rust-lang.rust-analyzer", "mhutchie.git-graph", "eamodio.gitlens"]
 		} 
 	}
-	// "overrideCommand": true
 }

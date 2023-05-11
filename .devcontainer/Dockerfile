@@ -6,12 +6,6 @@ RUN apt upgrade -y
 
 RUN apt install git -y
 
-# COPY ./ /workspace
+RUN adduser developer
 
-# RUN adduser developer
-
-# RUN chown -R developer:developer /workspace
-
-# USER developer
-
-# WORKDIR /workspace
+USER developer
