@@ -1,0 +1,16 @@
+{
+    "name": "devcontainer",
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "devcontainer",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "waderyan.gitblame",
+                "mhutchie.git-graph",
+                "donjayamanne.githistory",
+                "rust-lang.rust-analyzer"
+            ]
+        }
+    }
+}
